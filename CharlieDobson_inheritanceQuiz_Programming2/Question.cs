@@ -22,7 +22,7 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
             Console.WriteLine(_questionText);
         }
 
-        public bool CheckAnswer()
+        public virtual bool CheckAnswer()
         {
             Console.WriteLine("What is the answer?: ");
             string _givenAnswer = Console.ReadLine();
