@@ -15,10 +15,14 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         {
             _questionText = questionText;
             _correctAnswer = rightAnswer;
+
+            //_answerOptions = ;
         }
 
         public override bool CheckAnswer()
         {
+            Console.WriteLine("Press the corrosponding number key to select your answer: ");
+
             return base.CheckAnswer();
         }
     }
