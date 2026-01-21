@@ -11,10 +11,10 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         protected string _questionText;
         protected string _answerText;
 
-        public Question(string _writtenQuestion, string _writtenAnswer)
+        public Question(string questionText, string answerText)
         {
-            _questionText  = _writtenQuestion;
-            _answerText = _writtenAnswer;
+            _questionText  = questionText;
+            _answerText = answerText;
         }
 
         public void Ask()

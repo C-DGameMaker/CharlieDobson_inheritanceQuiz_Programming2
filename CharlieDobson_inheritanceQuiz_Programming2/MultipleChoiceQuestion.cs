@@ -11,10 +11,10 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         private string[] _answerOptions;
         private int _correctAnswer;
 
-        public MultipleChoiceQuestion(string _writtenQuestion, string _writtenAnswer, int _rightAnswer): base( _writtenQuestion,  _writtenAnswer)
+        public MultipleChoiceQuestion(string questionText, string answerText, int rightAnswer): base(questionText, answerText)
         {
-            _questionText = _writtenQuestion;
-            _correctAnswer = _rightAnswer;
+            _questionText = questionText;
+            _correctAnswer = rightAnswer;
         }
 
         public override bool CheckAnswer()
