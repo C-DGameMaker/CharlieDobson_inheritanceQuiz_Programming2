@@ -11,11 +11,10 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         private string[] _answerOptions;
         private int _correctAnswer;
 
-        public MultipleChoiceQuestion(string questionText, string[] answerText, int rightAnswer): base(questionText, answerText.ToString())
+        public MultipleChoiceQuestion(string questionText, string[] answerText, int rightAnswer): base(questionText, answerText[rightAnswer-1])
         {
             _questionText = questionText;
             _correctAnswer = rightAnswer;
-
             _answerOptions = answerText;
         }
 
@@ -26,8 +25,25 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
                 Console.WriteLine($"{i + 1}. {_answerOptions[1]}");
             }
             Console.WriteLine("Press the corrosponding number key to select your answer: ");
+            char selectedAnswer;
 
-            return base.CheckAnswer();
+            while(true)
+            {
+                selectedAnswer = Console.ReadKey().KeyChar;
+                if(char.IsDigit(selectedAnswer))
+                {
+                    break;
+                }
+            }
+
+            
+            int answerAsInt = int.Parse(selectedAnswer.ToString());
+
+            if(answerAsInt == _correctAnswer)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

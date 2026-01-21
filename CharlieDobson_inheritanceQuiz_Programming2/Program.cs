@@ -9,9 +9,14 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
 {
     internal class Program
     {
+        static List<Question> _quizQuestions = new List<Question>()
+        {
+            new Question(""),
+            new MultipleChoiceQuestion(),
+            new TrueOrFalseQuestion("True or False? Mario has a brother", true),
+        };
         static void Main(string[] args)
         {
-            List<Question> _quizQuestions = new List<Question>();
             int _maxScore = _quizQuestions.Count;
             int _currentScore = 0;
             string _titleArt = " _      _____ _     ____ ____  _      _____   _____ ____    _     ___  _   ____  _      ____  ____  _  _      _____\r\n/ \\  /|/  __// \\   /   _Y  _ \\/ \\__/|/  __/  /__ __Y  _ \\  / \\__/|\\  \\//  /  _ \\/ \\__/|/  _ \\/_   \\/ \\/ \\  /|/  __/\r\n| |  |||  \\  | |   |  / | / \\|| |\\/|||  \\      / \\ | / \\|  | |\\/|| \\  /   | / \\|| |\\/||| / \\| /   /| || |\\ ||| |  _\r\n| |/\\|||  /_ | |_/\\|  \\_| \\_/|| |  |||  /_     | | | \\_/|  | |  || / /    | |-||| |  ||| |-||/   /_| || | \\||| |_//\r\n\\_/  \\|\\____\\\\____/\\____|____/\\_/  \\|\\____\\    \\_/ \\____/  \\_/  \\|/_/     \\_/ \\|\\_/  \\|\\_/ \\|\\____/\\_/\\_/  \\|\\____\\\r\n                                                                                                                   \r\n ____  _     _  ____    ____  ____  ____  _    _____                                                               \r\n/  _ \\/ \\ /\\/ \\/_   \\  /  _ \\/  _ \\/  _ \\/ \\ /Y__ __\\                                                              \r\n| / \\|| | ||| | /   /  | / \\|| | //| / \\|| | || / \\                                                                \r\n| \\_\\|| \\_/|| |/   /_  | |-||| |_\\\\| \\_/|| \\_/| | |                                                                \r\n\\____\\\\____/\\_/\\____/  \\_/ \\|\\____/\\____/\\____/ \\_/                                                                \r\n                                                                                                                   \r\n ____  _     ____  _____ ____    _      ____  ____  _  ____    _     ____  ____  _____                             \r\n/ ___\\/ \\ /\\/  __\\/  __//  __\\  / \\__/|/  _ \\/  __\\/ \\/  _ \\  / \\   /  _ \\/  __\\/  __/                             \r\n|    \\| | |||  \\/||  \\  |  \\/|  | |\\/||| / \\||  \\/|| || / \\|  | |   | / \\||  \\/||  \\                               \r\n\\___ || \\_/||  __/|  /_ |    /  | |  ||| |-|||    /| || \\_/|  | |_/\\| \\_/||    /|  /_                              \r\n\\____/\\____/\\_/   \\____\\\\_/\\_\\  \\_/  \\|\\_/ \\|\\_/\\_\\\\_/\\____/  \\____/\\____/\\_/\\_\\\\____\\                             \r\n                                                                                                                   ";
@@ -36,7 +41,15 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
                     Console.WriteLine("You got it wrong...");
                 }
 
+                Console.ReadKey(true);
+                Console.Clear();
+
             }
+
+            Console.WriteLine($"You got {_currentScore}/{_maxScore} right");
+
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey(true);
         }
     }
 }
