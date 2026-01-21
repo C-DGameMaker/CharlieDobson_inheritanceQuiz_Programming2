@@ -11,15 +11,27 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         protected string _questionText;
         protected string _answerText;
 
-        public Question()
+        public Question(string _writtenQuestion, string _writtenAnswer)
         {
-            _questionText;
-            _answerText;
+            _questionText  = _writtenQuestion;
+            _answerText = _writtenAnswer;
         }
 
         public void Ask()
         {
             Console.WriteLine(_questionText);
+        }
+
+        public bool CheckAnswer()
+        {
+            Console.WriteLine("What is the answer?: ");
+            string _givenAnswer = Console.ReadLine();
+
+            if(_givenAnswer == _answerText)
+            {
+                return true;
+            }
+            return false;
         }
 
 
