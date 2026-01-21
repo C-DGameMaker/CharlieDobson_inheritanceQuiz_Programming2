@@ -22,9 +22,9 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         {
             for(int i = 0; i < _answerOptions.Length; i++)
             {
-                Console.WriteLine($"{i + 1}. {_answerOptions[1]}");
+                Console.WriteLine($"{i + 1}. {_answerOptions[i]}");
             }
-            Console.WriteLine("Press the corrosponding number key to select your answer: ");
+            Console.WriteLine("Press the corresponding number key to select your answer: ");
             char selectedAnswer;
 
             while(true)
@@ -38,6 +38,7 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
 
             
             int answerAsInt = int.Parse(selectedAnswer.ToString());
+            Console.WriteLine(" ");
 
             if(answerAsInt == _correctAnswer)
             {

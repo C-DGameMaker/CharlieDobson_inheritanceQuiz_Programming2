@@ -25,9 +25,10 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
         public virtual bool CheckAnswer()
         {
             Console.WriteLine("What is the answer?: ");
-            string _givenAnswer = Console.ReadLine();
+            string givenAnswer = Console.ReadLine();
+            givenAnswer = givenAnswer.ToLower();
 
-            if(_givenAnswer == _answerText)
+            if(givenAnswer.Trim() == _answerText.ToLower().Trim())
             {
                 return true;
             }

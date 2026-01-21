@@ -11,8 +11,6 @@ namespace CharlieDobson_inheritanceQuiz_Programming2
     {
         public TrueOrFalseQuestion(string questionText, bool answerAsBool) : base ( questionText,  answerAsBool.ToString())
         {
-            _questionText = questionText;
-            _answerText = answerAsBool.ToString();
         }
     }
 }
